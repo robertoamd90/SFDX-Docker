@@ -1,0 +1,6 @@
+FROM salesforce/cli:latest-slim
+RUN sfdx plugins:install sfdx-git-delta
+RUN sfdx plugins:install community
+RUN apt-get update
+RUN apt-get install sudo
+RUN sudo apt-get install jq -y
